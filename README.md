@@ -25,14 +25,12 @@ Explanation: 'e' is the letter that was added.
 ```ruby
 
 def find_difference(s , t)
-  s = s.split('').uniq.sort!
-  t = t.split('').uniq.sort!
   if s.length >= t.length 
-    puts s-t
-    puts t-s
+    puts s.split('')-t.split('')
+    puts t.split('')-s.split('')
   else
-    puts t-s 
-    puts s-t
+    puts t.split('')-s .split('')
+    puts s.split('')-t.split('')
   end
 end
 
@@ -60,10 +58,8 @@ Output: 8
 ```ruby
 
 def missing_num(arr)
-  minmax = arr.minmax
-  for i in minmax[0]..minmax[1]-1 do
-    puts i unless arr.include?(i)
-  end
+  arr2 =* 0..arr.max
+  puts arr2-arr
 end
 
 missing_num([3,0,1]) #2
