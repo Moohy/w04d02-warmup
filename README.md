@@ -27,10 +27,12 @@ Explanation: 'e' is the letter that was added.
 def find_difference(s , t)
   s = s.split('').uniq.sort!
   t = t.split('').uniq.sort!
-  if s.length > t.length 
+  if s.length >= t.length 
     puts s-t
-  else 
+    puts t-s
+  else
     puts t-s 
+    puts s-t
   end
 end
 
